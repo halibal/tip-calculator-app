@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- style starts -->
     <style>
         .attribution { font-size: 11px; text-align: center; }
         .attribution a { color: hsl(228, 45%, 44%); }
@@ -40,9 +42,6 @@
             border-radius: 1rem;
         }
 
-        .billInput {
-            background-color: hsl(185, 41%, 84%);
-        }
         .container {
             font-family: 'Outfit', sans-serif;
             font-family: 'Pacifico', cursive;
@@ -50,84 +49,90 @@
         }
 
     </style>
+    <!-- style ends -->
+
 </head>
 <body>
-
-    <div class="container d-flex flex-column justify-content-center align-content-center">
-        <h2 class="text-center mt-auto" style="color: hsl(186, 14%, 43%);">SPLI<br>TTER</h1>
-        <div class="d-sm-flex col-10 clcContainer bg-white p-5 mx-auto">
-
-            <!-- calculation part start -->
-            <div class="calculator col-sm-6 rounded-3 fw-bold">
-                <div class="billContainer col-11">
-                    <p class="mb-1" style="color: hsl(186, 14%, 43%);">Bill</p>
-                    <div class="d-flex input-group">
-                        <span class="input-group-text border-0 m-0" style="background-color: hsl(189, 41%, 97%);">
-                            <p class="fas-solid fa-dollar-sign fs-3 m-auto" style="color: hsl(186, 14%, 43%);"></p>
-                        </span>
-                        <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
-                        background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%);" type="text" name="" id="">
+    <div class="d-flex align-items-center" style="height: 1200px;">
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h2 class="text-center mt-auto mb-5 fw-bold" style="color: hsl(186, 14%, 43%);">SPLI<br>TTER</h1>
+            <div class="d-sm-flex col-10 clcContainer bg-white p-5 mt-3">
+    
+                <!-- calculation part starts -->
+                <div class="calculator col-sm-6 rounded-3 fw-bold">
+                    <div class="billContainer col-11">
+                        <p class="mb-1" style="color: hsl(186, 14%, 43%);">Bill</p>
+                        <div class="d-flex input-group">
+                            <span class="input-group-text border-0 m-0" style="background-color: hsl(189, 41%, 97%);">
+                                <p class="fas-solid fa-dollar-sign fs-3 m-auto" style="color: hsl(186, 14%, 43%);"></p>
+                            </span>
+                            <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
+                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" type="text" id="billInput" value="0">
+                        </div>
+                    </div>
+                    <div class="tipContainer col-11 mt-5">
+                        <p class="mb-1" style="color: hsl(186, 14%, 43%);">Select Tip %</p>
+                        <div class="d-flex percentages row justify-content-between">
+                            <button class="btn col-sm-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">5%</button>
+                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">10%</button>
+                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">15%</button>
+                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">25%</button>
+                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">50%</button>
+                            <button class="btn col-3 m-2 fs-3 fw-bold text-center p-0" style="background-color: hsl(189, 41%, 97%); color: hsl(186, 14%, 43%);">Custom</button>
+                        </div>
+                    </div>
+                    <div class="peopleNumContainer col-11 mt-4">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-1" style="color: hsl(186, 14%, 43%);">Number of People</p>
+                            <p class="text-danger">error message</p>
+                        </div>
+                        <div class="d-flex input-group">
+                            <span class="input-group-text border-0 m-0" style="background-color: hsl(189, 41%, 97%);">
+                                <p class="fa-solid fa-user-large fs-5 m-auto" style="color: hsl(186, 14%, 43%);"></p>
+                            </span>
+                            <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
+                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" type="text" id="numberOfPeople" value="0">
+                        </div>
                     </div>
                 </div>
-                <div class="tipContainer col-11 mt-5">
-                    <p class="mb-1" style="color: hsl(186, 14%, 43%);">Select Tip %</p>
-                    <div class="d-flex percentages row justify-content-between">
-                        <button class="btn col-sm-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%); width: 7vw;">5%</button>
-                        <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%); width: 7vw;">10%</button>
-                        <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%); width: 7vw;">15%</button>
-                        <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%); width: 7vw;">25%</button>
-                        <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%); width: 7vw;">50%</button>
-                        <button class="btn col-3 m-2 fs-3 fw-bold text-center p-0" style="background-color: hsl(189, 41%, 97%); color: hsl(186, 14%, 43%); width: 7vw;">Custom</button>
+                <!-- calculation part ends -->
+    
+                <!-- Calculated Right-Side Panel starts -->
+                <div class="result col-sm-6 p-5 d-flex flex-column">
+                    <div>
+                        <div class="tip d-flex justify-content-between align-items-center">
+                            <div class="tiptxt">
+                                <p class="text-white mb-0">Tip Amount</p>
+                                <p class="mt-0 fw-bold" style="font-size: x-small; color: hsl(185, 18%, 61%);">/ person</p>
+                            </div>
+                            <div class="tipamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
+                                <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
+                                <p class="tipCalculated fs-1">0.00</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="peopleNumContainer col-11 mt-4">
-                    <p class="mb-1" style="color: hsl(186, 14%, 43%);">Number of People</p>
-                    <div class="d-flex input-group">
-                        <span class="input-group-text border-0 m-0" style="background-color: hsl(189, 41%, 97%);">
-                            <p class="fa-solid fa-user-large fs-5 m-auto" style="color: hsl(186, 14%, 43%);"></p>
-                        </span>
-                        <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
-                        background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%);" type="text" name="" id="">
+                    <div>
+                        <div class="total d-flex justify-content-between align-items-center">
+                            <div class="totaltxt">
+                                <p class="text-white mb-0">Total</p>
+                                <p class="mt-0 fw-bold" style="font-size: x-small; color: hsl(185, 18%, 61%);">/ person</p>
+                            </div>
+                            <div class="totalamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
+                                <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
+                                <p class="totalCalculated fs-1">0.00</p>
+                            </div>
+                        </div>
                     </div>
+                    <div class="mt-auto">
+                        <button class="rstBtn btn btn-lg w-100 fw-bolder fs-4 ms-auto" style="background-color: hsl(170, 46%, 48%); color: hsl(183, 100%, 15%);">RESET</div>
+                    </div>
+                    
                 </div>
+                <!-- Calculated Right-Side Panel ends -->
             </div>
-            <!-- calculation part end -->
-
-            <!-- Calculated Right-Side Panel start -->
-            <div class="result col-sm-6 p-5 d-flex flex-column">
-                <div>
-                    <div class="tip d-flex justify-content-between align-items-center">
-                        <div class="tiptxt">
-                            <p class="text-white mb-0">Tip Amount</p>
-                            <p class="mt-0 fw-bold" style="font-size: x-small; color: hsl(185, 18%, 61%);">/ person</p>
-                        </div>
-                        <div class="tipamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
-                            <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
-                            <p class="tipCalculated fs-1">4.27</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="total d-flex justify-content-between align-items-center">
-                        <div class="totaltxt">
-                            <p class="text-white mb-0">Total</p>
-                            <p class="mt-0 fw-bold" style="font-size: x-small; color: hsl(185, 18%, 61%);">/ person</p>
-                        </div>
-                        <div class="totalamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
-                            <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
-                            <p class="totalCalculated fs-1">32.79</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-auto">
-                    <button class="rstBtn btn btn-lg w-100 fw-bolder fs-4 ms-auto" style="background-color: hsl(170, 46%, 48%); color: hsl(183, 100%, 15%);">RESET</div>
-                </div>
-                
-            </div>
-            <!-- Calculated Right-Side Panel end -->
         </div>
     </div>
-
+    
 
     <!-- personal starts -->
     <div class="attribution fixed-bottom">
