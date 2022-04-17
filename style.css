@@ -16,6 +16,11 @@ body {
     font-family: 'Space Mono', monospace;
 }
 
+h1 {
+    color: hsl(186, 14%, 43%);
+    font-size: 2rem;
+}
+
 .hover {
     background-color: hsl(183, 100%, 15%);
 }
