@@ -1,0 +1,60 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+body {          
+    background-color: hsl(185, 41%, 84%);
+}
+.clcContainer {
+    border-radius: 2rem;
+}
+.result {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 1rem;
+}
+.container {
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Space Mono', monospace;
+}
+
+.hover {
+    background-color: hsl(183, 100%, 15%);
+}
+.hover:hover {
+    background-color: hsl(170, 94%, 70%);
+    opacity: 100;
+}
+#reset {
+    background-color: hsl(170, 46%, 48%); 
+    color: hsl(183, 100%, 15%);
+    height: 3.5rem;
+    font-size: 1.4rem;
+}
+#reset:hover {
+    background-color: hsl(170, 94%, 70%);
+}
+#custom {
+    background-color: hsl(189, 41%, 97%); 
+    color: hsl(186, 14%, 43%);
+}
+#custom:hover {
+    border: 0.2rem;
+    border-style: solid;
+    border-color: cyan;
+}
+#custom:focus {
+    border: 0.2rem;
+    border-style: solid;
+    border-color: cyan;
+}
+.bd-cyan {
+    border: 0.2rem;
+    border-style: solid;
+    border-color: cyan;
+    border-radius: 0.5rem;
+}
+.bd-coral {
+    border: 0.2rem;
+    border-style: solid;
+    border-color: coral;
+    border-radius: 0.5rem;
+}
