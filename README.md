@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-- ![My screenshot](/images/project_screenshot.png)
+![My screenshot](/images/project_screenshot.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor | My Solution](https://www.frontendmentor.io/solutions/interactive-rating-component-html-js-css-bootstrap-r1NJ0ru4q)
-- Live Site URL: [Halibal | Tip Calculator App](https://halibal.github.io/interactive-rating-component/)
+- Solution URL: [Frontend Mentor | My Solution](https://www.frontendmentor.io/solutions/tip-calculator-app-using-css-bootstrap-javascript-r1QEYJ945)
+- Live Site URL: [Halibal | Tip Calculator App](https://halibal.github.io/tip-calculator-app/)
 
 ### Built with
 
