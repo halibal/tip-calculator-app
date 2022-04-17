@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-- ![My screenshot]()
+- ![My screenshot](/images/project_screenshot.png)
 
 ### Links
 
