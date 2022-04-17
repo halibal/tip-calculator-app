@@ -67,18 +67,18 @@
                                 <p class="fas-solid fa-dollar-sign fs-3 m-auto" style="color: hsl(186, 14%, 43%);"></p>
                             </span>
                             <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
-                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" type="text" id="billInput" value="0">
+                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" id="billInput" value="0.0">
                         </div>
                     </div>
                     <div class="tipContainer col-11 mt-5">
                         <p class="mb-1" style="color: hsl(186, 14%, 43%);">Select Tip %</p>
                         <div class="d-flex percentages row justify-content-between">
-                            <button class="btn col-sm-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">5%</button>
-                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">10%</button>
-                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">15%</button>
-                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">25%</button>
-                            <button class="btn col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">50%</button>
-                            <button class="btn col-3 m-2 fs-3 fw-bold text-center p-0" style="background-color: hsl(189, 41%, 97%); color: hsl(186, 14%, 43%);">Custom</button>
+                            <button class="btn percent col-sm-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">5%</button>
+                            <button class="btn percent col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">10%</button>
+                            <button class="btn percent col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">15%</button>
+                            <button class="btn percent col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">25%</button>
+                            <button class="btn percent col-3 m-2 text-white fs-3" style="background-color: hsl(183, 100%, 15%);">50%</button>
+                            <button class="btn percent col-3 m-2 fs-3 fw-bold text-center p-0" style="background-color: hsl(189, 41%, 97%); color: hsl(186, 14%, 43%);">Custom</button>
                         </div>
                     </div>
                     <div class="peopleNumContainer col-11 mt-4">
@@ -91,7 +91,7 @@
                                 <p class="fa-solid fa-user-large fs-5 m-auto" style="color: hsl(186, 14%, 43%);"></p>
                             </span>
                             <input class="form-control input-group border-0 text-end fs-3 fw-bold" style="
-                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" type="text" id="numberOfPeople" value="0">
+                            background-color: hsl(189, 41%, 97%); color: hsl(183, 100%, 15%); cursor: pointer;" type="text" id="NoP" value="0">
                         </div>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="tipamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
                                 <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
-                                <p class="tipCalculated fs-1">0.00</p>
+                                <p id="tipCalculated" class="fs-1">0.00</p>
                             </div>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             </div>
                             <div class="totalamount d-flex fw-bold"  style="color: hsl(170, 46%, 48%);">
                                 <p class="fas-solid fa-dollar-sign fs-1 me-1"></p>
-                                <p class="totalCalculated fs-1">0.00</p>
+                                <p id="totalCalculated" class="fs-1">0.00</p>
                             </div>
                         </div>
                     </div>
