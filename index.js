@@ -35,7 +35,8 @@ reset.addEventListener('click', function(){
 // reset button function ends
 
 
-function calculatep5() {
+// onclick percentage button functions start
+function calculatep(percentage) {
     let billP = parseFloat(bill.value)
     let NoPP = parseFloat(NoP.value)
     
@@ -49,162 +50,28 @@ function calculatep5() {
         billDiv.classList.add("bd-coral");
         NoPDiv.classList.add("bd-cyan");
     }
-
     else if (NoPP == 0) {
         err.innerHTML = `Can not be zero`;
         NoPDiv.classList.add("bd-coral");
         billDiv.classList.add("bd-cyan");
     }
-
     else if 
     (!isNaN(NoPP) && !isNaN(billP)) {
-        let total = (billP/20+billP)/NoPP
+        let total = (billP*(percentage/100)+billP)/NoPP
         totalCalculated.innerHTML = total;
 
-        let tip = billP/20/NoPP
+        let tip = billP*(percentage/100)/NoPP
         tipCalculated.innerHTML = tip;
         err.innerHTML = ''
     }
     else {
         err.innerHTML = `This is not a number`
-
-    }
-    
+    }  
 }
+// onclick percentage button functions end
 
-function calculatep10() {
-    let billP = parseFloat(bill.value)
-    let NoPP = parseFloat(NoP.value)
-    if (billP == 0 && NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-coral");
-    }
-    else if (billP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-cyan");
-    }
 
-    else if (NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        NoPDiv.classList.add("bd-coral");
-        billDiv.classList.add("bd-cyan");
-    }
-
-    else if (!isNaN(NoPP) && !isNaN(billP)) {
-        let total = (billP/10+billP)/NoPP
-        totalCalculated.innerHTML = total;
-
-        let tip = billP/10/NoPP
-        tipCalculated.innerHTML = tip;
-        err.innerHTML = ''
-    }
-    else {
-        err.innerHTML = `This is not a number`
-    }
-}
-
-function calculatep15() {
-    let billP = parseFloat(bill.value)
-    let NoPP = parseFloat(NoP.value)
-    if (billP == 0 && NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-coral");
-    }
-    else if (billP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-cyan");
-    }
-
-    else if (NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        NoPDiv.classList.add("bd-coral");
-        billDiv.classList.add("bd-cyan");
-    }
-    
-    else if (!isNaN(NoPP) && !isNaN(billP)) {
-        let total = (billP*15/100+billP)/NoPP
-        totalCalculated.innerHTML = total;
-
-        let tip = billP*15/100/NoPP
-        tipCalculated.innerHTML = tip;
-        err.innerHTML = ''
-    }
-    else {
-        err.innerHTML = `This is not a number`
-    }
-}
-
-function calculatep25() {
-    let billP = parseFloat(bill.value)
-    let NoPP = parseFloat(NoP.value)
-    if (billP == 0 && NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-coral");
-    }
-    else if (billP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-cyan");
-    }
-
-    else if (NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        NoPDiv.classList.add("bd-coral");
-        billDiv.classList.add("bd-cyan");
-    }
-    
-    else if (!isNaN(NoPP) && !isNaN(billP)) {
-        let total = (billP/4+billP)/NoPP
-        totalCalculated.innerHTML = total;
-
-        let tip = billP/4/NoPP
-        tipCalculated.innerHTML = tip;
-        err.innerHTML = ''
-    }
-    else {
-        err.innerHTML = `This is not a number`
-    }
-}
-
-function calculatep50() {
-    let billP = parseFloat(bill.value)
-    let NoPP = parseFloat(NoP.value)
-    if (billP == 0 && NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-coral");
-    }
-    else if (billP == 0) {
-        err.innerHTML = `Can not be zero`;
-        billDiv.classList.add("bd-coral");
-        NoPDiv.classList.add("bd-cyan");
-    }
-
-    else if (NoPP == 0) {
-        err.innerHTML = `Can not be zero`;
-        NoPDiv.classList.add("bd-coral");
-        billDiv.classList.add("bd-cyan");
-    }
-
-    else if (!isNaN(NoPP) && !isNaN(billP)) {
-        let total = (billP/2+billP)/NoPP
-        totalCalculated.innerHTML = total;
-
-        let tip = billP/2/NoPP
-        tipCalculated.innerHTML = tip;
-        err.innerHTML = ''
-    }
-
-    else {
-        err.innerHTML = `This is not a number`
-    }
-}
-
+// custom button function starts
 custom.addEventListener('input', customCalculated)
 
 
@@ -245,132 +112,4 @@ function customCalculated() {
         err.innerHTML = `This is not a number`
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// bill.addEventListener('input', setBillValue);
-// NoP.addEventListener('input', setPeople);
-
-
-// billValue = setBillValue();
-// setNum = setPeople();
-
-// function validateFloat(s) {
-//     var rgx = /^[0-9]*\.?[0-9]*$/; 
-//     return s.match(rgx);   
-// }
-
-// function setBillValue() {
-//     if (bill.value.includes(',')) {
-//         bill.value = bill.value.replace(',', '.');
-//     }
-
-//     if (!validateFloat(bill.value)){
-//        bill.value = bill.value.substring(0, bill.value.length-1);
-//     }
-
-//     billValue = parseFloat(bill.value);
-    
-//     return billValue;
-// }
-
-
-// function setPeople() {
-//     setNum = parseFloat(NoP.value);
-//     return setNum;
-// }
-
-
-// let total5 = ((billValue.value + billValue.value/20)/setNum.value)
-// let total10 = ((billValue + billValue/10)/setNum)
-// let total15 = ((billValue + billValue*15/100)/setNum)
-// let total25 = ((billValue + billValue/4)/setNum)
-// let total50 = ((billValue + billValue/2)/setNum)
-
-// let totals = [total5, total10, total15, total25, total50]
-
-// percent[0].addEventListener('click', function() {
-//         totalCalculated.innerHTML = total5
-//     })
-
+// custom button function ends
